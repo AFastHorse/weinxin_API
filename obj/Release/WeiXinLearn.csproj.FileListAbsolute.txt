@@ -1,0 +1,11 @@
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\WeiXinLearn.dll
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\WeiXinLearn.pdb
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\obj\Release\WeiXinLearn.csprojResolveAssemblyReference.cache
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\obj\Release\WeiXinLearn.dll
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\obj\Release\WeiXinLearn.pdb
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\Newtonsoft.Json.dll
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\Newtonsoft.Json.xml
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\QRCoder.dll
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\UnityEngine.dll
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\Dapper.dll
+F:\gaoyuwei\Test\HelloWorld\WeiXinLearn\bin\Dapper.xml

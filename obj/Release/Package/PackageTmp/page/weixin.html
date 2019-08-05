@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/jquery.form.js"></script>
+    <script>
+        $(function () {
+            $('#form1').submit(function (e) {
+                e.preventDefault();
+                var form = $('#form1');
+                $('#form1').ajaxSubmit({
+                    url: '/handle/WeiXinHelperHanlder.ashx?action=post_media&permanetOrTemp=' + encodeURI('material/add_material') + '&r=' + Math.random(),
+                    type: 'post',
+                    data: form.formSerialize(),
+                    success: function (result) {
+                        var data = JSON.parse(result);
+                        console.log("media_id:\t" + data.media_id);
+                    }
+                });
+            });
+        });
+        function get_ip_list() {
+            $.ajax({
+                url: '/handle/WeiXinHelperHanlder.ashx?action=ip_list&r=' + Math.random(),
+                dataType: 'html',
+                data: {},
+                type: 'get',
+                success: function (result) {
+                    var data = JSON.parse(result);
+                    $.each(data.ip_list, function (i, val) {
+                        console.log(val);
+                    });
+                }
+            });
+        }
+        function get_check_result() {
+            $.ajax({
+                url: '/handle/WeiXinHelperHanlder.ashx?action=check&r=' + Math.random(),
+                dataType: 'html',
+                data: {},
+                type: 'get',
+                success: function (result) {
+                    var data = JSON.parse(result);
+                    console.log(data);
+                }
+            });
+        }
+        function get_access_token() {
+            $.ajax({
+                url: '/handle/WeiXinHelperHanlder.ashx?action=access_token&r=' + Math.random(),
+                dataType: 'html',
+                data: {},
+                type: 'get',
+                success: function (result) {
+                    console.log(result);
+                }
+            });
+        }
+        function get_create_menu() {
+            $.ajax({
+                url: '/handle/WeiXinHelperHanlder.ashx?action=create_menu&r=' + Math.random(),
+                dataType: 'html',
+                data: {},
+                type: 'get',
+                success: function (result) {
+                    console.log(result);
+                }
+            });
+        }
+        function get_temp_media() {
+            $.ajax({
+                url: '/handle/WeiXinHelperHanlder.ashx?action=get_temp_media&r=' + Math.random(),
+                dataType: 'html',
+                data: {},
+                type: 'get',
+                success: function (result) {
+                    console.log(result);
+                    var data = JSON.parse(result);
+                    $('#imgMedia').attr('src', data.video_url);
+                }
+            });
+        }
+        function get_qrcode() {
+            $.ajax({
+                url: '/handle/WeiXinHelperHanlder.ashx?action=get_qrcode&r=' + Math.random(),
+                dataType: 'html',
+                data: {},
+                type: 'get',
+                success: function (result) {
+                    var data = JSON.parse(result);
+                    console.log("ticket:\t" + data.ticket);
+                    console.log("url:\t" + data.url);
+                    $('#imgMedia').attr('src', "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + data.ticket);
+                }
+            });
+        }
+        function generate_qrcode() {
+            $.ajax({
+                url: '/handle/WeiXinHelperHanlder.ashx?action=generate_qrcode&expire_seconds=0&action_name=QR_LIMIT_SCENE&permanentOrTemp=material/add_material&r=' + Math.random(),
+                //url: '/handle/WeiXinHelperHanlder.ashx?action=generate_qrcode&r=' + Math.random(),
+                dataType: 'html',
+                data: {},
+                type: 'get',
+                success: function (result) {
+                    var data = JSON.parse(result);
+                    console.log(data.type + ":\t" + data.media_id);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcom to my zone!</h1>
+    <input type="button" value="get_access_token" onclick="get_access_token();" id="btnAccessToken" />
+    <input type="button" value="get_ip_list" onclick="get_ip_list();" id="btnGetIPList" />
+    <input type="button" value="get_check_result" onclick="get_check_result();" id="btnGetCheckResult" />
+    <input type="button" value="get_create_menu" onclick="get_create_menu();" id="btnCreateMenu" />
+    <input type="button" value="get_temp_media" onclick="get_temp_media();" id="btnGetTempMedia" />
+    <input type="button" value="get_qrcode" onclick="get_qrcode();" id="btnGetQrCode" />
+    <input type="button" value="generate_qrcode" onclick="generate_qrcode();" id="btnGenerateQrCode" />
+    <hr />
+    <form id="form1">
+        <input name="txtName" type="text" value="上传图片" />
+        <input type="file" name="txtImage" />
+        <input type="submit" name="txtBtn" value="Submit" />
+    </form>
+    <hr />
+    <img id="imgMedia" src="" />
+</body>
+</html>

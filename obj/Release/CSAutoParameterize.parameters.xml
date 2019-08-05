@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="EduPcDb-Web.config Connection String" description="EduPcDb 由应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="Data Source=.;Database=EduPcDb;User ID=sa;Password=123456;Pooling=true;Min Pool Size=10;Max Pool Size=512;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="F:\\gaoyuwei\\Test\\HelloWorld\\WeiXinLearn\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EduPcDb']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\WebSite\WeiXinTest</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFCyo2LSh7USyTi05NP+rhQAAAAACAAAAAAAQZgAAAAEAACAAAADy6RY2yW/iHmo2/OVYi+5VNii81FQcBaJELkj00Q7qyQAAAAAOgAAAAAIAACAAAADrRF/6YfAnU0VjD9lieNiDbHVJF2FEnV/ZExFWwFIt1iAAAADIqfpiKk//8AxjNUcOcPos2naMLf5Ny58HilfmAKaSKEAAAAAmCsoeciR+7lwiuQ2+omY3YyUgR62AgzCFN0LFUSINiA9VrWJycvfavwpPSsaijsD59n0BqBr2m8Mw7eHQ4VVU</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Dapper.dll">
+      <publishTime>08/03/2019 14:27:55</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/30/2018 11:16:47</publishTime>
+    </File>
+    <File Include="bin/QRCoder.dll">
+      <publishTime>08/01/2019 18:54:56</publishTime>
+    </File>
+    <File Include="bin/UnityEngine.dll">
+      <publishTime>08/01/2019 18:54:56</publishTime>
+    </File>
+    <File Include="bin/WeiXinLearn.dll">
+      <publishTime>08/04/2019 15:02:19</publishTime>
+    </File>
+    <File Include="handle/WeiXinHandler.ashx">
+      <publishTime>07/29/2019 18:05:03</publishTime>
+    </File>
+    <File Include="handle/WeiXinHelperHanlder.ashx">
+      <publishTime>07/31/2019 09:19:24</publishTime>
+    </File>
+    <File Include="images/title.jpg">
+      <publishTime>08/03/2019 08:56:47</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/03/2019 14:27:56</publishTime>
+    </File>
+    <File Include="page/weixin.html">
+      <publishTime>08/03/2019 08:56:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>07/30/2019 10:28:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>07/30/2019 10:28:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>07/30/2019 10:28:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>07/30/2019 10:28:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>07/30/2019 10:28:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>07/30/2019 10:28:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.form.js">
+      <publishTime>08/01/2019 11:06:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.form.min.js">
+      <publishTime>08/01/2019 11:06:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.form.min.js.map">
+      <publishTime>08/01/2019 11:06:36</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/03/2019 15:16:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
