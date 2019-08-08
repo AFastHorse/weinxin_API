@@ -76,8 +76,8 @@
     <Content Include="images\title.jpg" />
     <Content Include="page\weixin.html" />
     <Content Include="packages.config" />
-    <Content Include="handle\WeiXinHelperHanlder.ashx" />
-    <None Include="Properties\PublishProfiles\test.pubxml" />
+    <Content Include="handle\WeiXinHelperHandler.ashx" />
+    <None Include="Properties\PublishProfiles\Remote.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -85,11 +85,14 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\jquery.form.js" />
     <Content Include="Scripts\jquery.form.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-    <None Include="Web.test.config">
+    <None Include="Web.Remote.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -101,8 +104,8 @@
     <Compile Include="handle\WeiXinHandler.ashx.cs">
       <DependentUpon>WeiXinHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="handle\WeiXinHelperHanlder.ashx.cs">
-      <DependentUpon>WeiXinHelperHanlder.ashx</DependentUpon>
+    <Compile Include="handle\WeiXinHelperHandler.ashx.cs">
+      <DependentUpon>WeiXinHelperHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Models\QrCode.cs" />
     <Compile Include="Models\WeiXinModel.cs" />
@@ -111,13 +114,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="handle\WeiXinHandler.ashx" />
-    <None Include="Properties\PublishProfiles\WeiXinLearn.pubxml" />
+    <None Include="Properties\PublishProfiles\WeiXinLearn.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery.form.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <PropertyGroup>
@@ -125,6 +132,9 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'test|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Remote|AnyCPU'">
     <OutputPath>bin\</OutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
